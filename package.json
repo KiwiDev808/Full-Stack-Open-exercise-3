@@ -1,0 +1,28 @@
+{
+  "name": "phonebook-backend",
+  "version": "1.0.0",
+  "description": "backend for phonebook",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KiwiDev808/Full-Stack-Open-exercise-3.git"
+  },
+  "author": "Lucas Bacelar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KiwiDev808/Full-Stack-Open-exercise-3/issues"
+  },
+  "homepage": "https://github.com/KiwiDev808/Full-Stack-Open-exercise-3#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

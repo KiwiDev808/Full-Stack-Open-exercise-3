@@ -1,0 +1,15 @@
+
+### Get All Persons
+GET http://localhost:3330/api/persons
+
+### Create Person
+POST http://localhost:3330/api/persons
+Content-Type: application/json
+
+{
+  "name":"Ada Lovelac",
+  "number": "39-44-5323523"
+}
+
+### Delete Person
+DELETE http://localhost:3330/api/persons/288
