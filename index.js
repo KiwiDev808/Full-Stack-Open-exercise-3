@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
+const cors = require('cors');
 
 let persons = [
   {
@@ -25,7 +26,9 @@ let persons = [
   },
 ];
 
+app.use(cors());
 app.use(express.json());
+app.use(express.static('build'));
 
 morgan.token('body', (req, res) => {
   return JSON.stringify(req.body);
@@ -34,10 +37,6 @@ morgan.token('body', (req, res) => {
 app.use(
   morgan(':method :url :status :res[content-length] - :response-time ms :body')
 );
-
-app.get('/', (request, response) => {
-  response.send('<h1>Hello World!</h1>');
-});
 
 app.get('/info', (request, response) => {
   const phoneBookEntries = `Phonebook has info for ${persons.length} people`;
@@ -71,8 +70,7 @@ app.delete('/api/persons/:id', (request, response) => {
 });
 
 const generateId = () => {
-  let min = persons.length > 0 ? Math.max(...persons.map((n) => n.id)) + 1 : 0;
-  return Math.floor(Math.random() * (1000 - min) + min);
+  return Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
 };
 
 app.post('/api/persons', (request, response) => {
