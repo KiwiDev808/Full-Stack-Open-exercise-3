@@ -1,9 +1,10 @@
+@baseUrl = https://stark-plains-42807.herokuapp.com
 
 ### Get All Persons
-GET http://localhost:3330/api/persons
+GET {{baseUrl}}/api/persons
 
 ### Create Person
-POST http://localhost:3330/api/persons
+POST {{baseUrl}}/api/persons
 Content-Type: application/json
 
 {
@@ -12,4 +13,4 @@ Content-Type: application/json
 }
 
 ### Delete Person
-DELETE http://localhost:3330/api/persons/288
+DELETE {{baseUrl}}/api/persons/8891445346554555
