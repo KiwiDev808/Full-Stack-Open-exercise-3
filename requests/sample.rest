@@ -1,4 +1,4 @@
-@baseUrl = https://stark-plains-42807.herokuapp.com
+@baseUrl = http://localhost:3002
 
 ### Get All Persons
 GET {{baseUrl}}/api/persons
@@ -9,7 +9,7 @@ Content-Type: application/json
 
 {
   "name":"Ada Lovelac",
-  "number": "39-44-5323523"
+  "number": "3-44-5323523"
 }
 
 ### Delete Person

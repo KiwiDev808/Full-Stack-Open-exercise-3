@@ -50,10 +50,6 @@ app.delete('/api/persons/:id', (request, response) => {
   }
 });
 
-const generateId = () => {
-  return Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
-};
-
 app.post('/api/persons', (request, response) => {
   const body = request.body;
 
@@ -63,21 +59,14 @@ app.post('/api/persons', (request, response) => {
     });
   }
 
-  if (persons.some((person) => person.name === body.name)) {
-    return response.status(409).json({
-      error: 'name must be unique',
-    });
-  }
-
-  const person = {
+  const person = new Person({
     name: body.name,
     number: body.number,
-    id: generateId(),
-  };
+  });
 
-  persons = persons.concat(person);
-
-  response.json(person);
+  person.save().then((savedPerson) => {
+    response.json(savedPerson);
+  });
 });
 
 const PORT = process.env.PORT || 3001;
