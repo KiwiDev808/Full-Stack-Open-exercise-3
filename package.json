@@ -20,6 +20,7 @@
   "homepage": "https://github.com/KiwiDev808/Full-Stack-Open-exercise-3#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "mongoose": "^5.12.8",
     "morgan": "^1.10.0"
