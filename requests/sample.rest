@@ -3,12 +3,15 @@
 ### Get All Persons
 GET {{baseUrl}}/api/persons
 
+### Find Person
+GET {{baseUrl}}/api/persons/609a7dd7b24f5f03c1671245
+
 ### Create Person
 POST {{baseUrl}}/api/persons
 Content-Type: application/json
 
 {
-  "name":"Anna",
+  "name":"Ann",
   "number": "3-4-3523"
 }
 
@@ -17,10 +20,10 @@ PUT {{baseUrl}}/api/persons/609a7e2f43dcf304455d0277
 Content-Type: application/json
 
 {
-  "name":"Ann",
+  "name":"Anna",
   "number": "3-4-323"
 }
 
 ### Delete Person
-DELETE {{baseUrl}}/api/persons/609
+DELETE {{baseUrl}}/api/persons/609be61997e17516618d047a
 
