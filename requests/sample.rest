@@ -11,8 +11,8 @@ POST {{baseUrl}}/api/persons
 Content-Type: application/json
 
 {
-  "name":"Ann",
-  "number": "3-4-3523"
+  "name":"Annsa",
+  "number": "3-4-35213"
 }
 
 ### Update Person
@@ -21,7 +21,7 @@ Content-Type: application/json
 
 {
   "name":"Anna",
-  "number": "3-4-323"
+  "number": "3-"
 }
 
 ### Delete Person

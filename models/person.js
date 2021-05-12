@@ -20,8 +20,8 @@ mongoose
   });
 
 const personSchema = new mongoose.Schema({
-  name: { type: String, required: true, unique: true },
-  number: { type: String, required: true, unique: true },
+  name: { type: String, minLength: 3, required: true, unique: true },
+  number: { type: String, minLength: 8, required: true, unique: true },
 });
 
 personSchema.set('toJSON', {
