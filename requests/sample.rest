@@ -8,9 +8,19 @@ POST {{baseUrl}}/api/persons
 Content-Type: application/json
 
 {
-  "name":"Ada Lovelac",
-  "number": "3-44-5323523"
+  "name":"Anna",
+  "number": "3-4-3523"
+}
+
+### Update Person
+PUT {{baseUrl}}/api/persons/609a7e2f43dcf304455d0277
+Content-Type: application/json
+
+{
+  "name":"Ann",
+  "number": "3-4-323"
 }
 
 ### Delete Person
-DELETE {{baseUrl}}/api/persons/609a9340e0a0683066bca99e
+DELETE {{baseUrl}}/api/persons/609
+
