@@ -49,6 +49,28 @@ app.delete('/api/persons/:id', (request, response, next) => {
     });
 });
 
+app.put('/api/persons/:id', (request, response, next) => {
+  const body = request.body;
+  const newPerson = {
+    number: body.number,
+  };
+  Person.findOne({ name: body.name })
+    .then((person) => {
+      if (person) {
+        Person.findByIdAndUpdate(person.id, newPerson, { new: true }).then(
+          (updatedPerson) => {
+            response.json(updatedPerson);
+          }
+        );
+      } else {
+        response.status(404).end();
+      }
+    })
+    .catch((error) => {
+      next(error);
+    });
+});
+
 app.post('/api/persons', (request, response) => {
   const body = request.body;
 
