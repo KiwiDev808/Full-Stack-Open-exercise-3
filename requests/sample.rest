@@ -20,8 +20,8 @@ PUT {{baseUrl}}/api/persons/609a7e2f43dcf304455d0277
 Content-Type: application/json
 
 {
-  "name":"Anna",
-  "number": "3-"
+  "name":"Arto",
+  "number": "333333333-33333"
 }
 
 ### Delete Person
